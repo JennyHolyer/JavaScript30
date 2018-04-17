@@ -26,7 +26,7 @@
     //   }
     // })
     // To this.
-    const fifteen = inventors.filter(inventor => (inventor.year >= 1500 && inventor.year < 1600));
+    // const fifteen = inventors.filter(inventor => (inventor.year >= 1500 && inventor.year < 1600));
 
     console.table(fifteen);
     // ************************************************************************************************
