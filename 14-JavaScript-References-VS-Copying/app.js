@@ -9,10 +9,10 @@ let age2 = age;
 age = 200;
 // console.log(age, age2);
 
-let name = "Wes";
-let name2 = name;
+// let name = "Wes";
+// let name2 = name;
 // console.log(name, name2);
-name = "wesley";
+// name = "wesley";
 // console.log(name, name2);
 
 // Let's say we have an array
@@ -53,36 +53,51 @@ const team5 = Array.from(players);
 // The same thing goes for objects, let's say we have a person object
 
 // with Objects
-const person = {
-  name: "Wes Bos",
-  age: 80
-};
+const person = [
+  {
+    name: "Wes Bos",
+    age: 80
+  },
+  {
+    name: "Wes Bos",
+    age: 80
+  },
+  {
+    name: "Wes Bos",
+    age: 7
+  }
+]
 
 // and think we make a copy:
 // const captain = person;
 // captain.number = 99; // This will add the 'number' key and its value into the original obj.
 
 // how do we take a copy instead?
-const cap2 = Object.assign({}, person, { number: 99, age: 12 });
+// const cap2 = Object.assign({}, person, {
+//   number: 99,
+//   age: 12
+// });
 // Object.assign(blank obj, obj you wish to copy all the props from, props you wish to overwrite)
 // console.log(cap2);
 
 // object ...spread works the same way as array spread SHALLOWLY!! It only goes in 1 level deep. It will overwrite anything deeper then that. If you need to clone deep then use cloneDeep :)
-const cap3 = { ...person };
-console.log("cap3", cap3);
+const cap3 = person;
+let capArr = []
+const test = cap3.map((item) => capArr.push(item.name))
+console.log("test", test);
 
 // Things to note - this is only 1 level deep - both for Arrays and Objects. lodash has a cloneDeep method, but you should think twice before using it.
 
-const wes = {
-  name: "Wes",
-  age: 100,
-  social: {
-    twitter: "@wesbos",
-    facebook: "wesbos.developer"
-  }
-};
+// const wes = {
+//   name: "Wes",
+//   age: 100,
+//   social: {
+//     twitter: "@wesbos",
+//     facebook: "wesbos.developer"
+//   }
+// };
 
-console.log(wes);
+// console.log(wes);
 
 const dev = Object.assign({}, wes);
 
